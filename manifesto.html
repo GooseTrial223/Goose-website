@@ -163,6 +163,54 @@
             right: 1rem;
         }
 
+        .photo-gallery {
+            padding: 2rem;
+            margin: 4rem 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(219, 161, 161, 0.9);
+            color: white;
+            padding: 1rem;
+            font-family: 'Permanent Marker', cursive;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .nav-list {
                 gap: 1rem;
@@ -174,6 +222,15 @@
 
             .stats-card {
                 margin: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .gallery-item img {
+                height: 300px;
             }
         }
     </style>
@@ -238,6 +295,28 @@
                 <div class="stat-item">
                     <div class="stat-label">Weakness</div>
                     <div class="stat-value">The word "no." Doesn't register.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-gallery">
+            <h2 style="text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; margin-bottom: 2rem;">GOOSE IN ACTION</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/goose-1.png" alt="Goose being majestic">
+                    <div class="gallery-caption">Living his best life</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/goose-2.png" alt="Goose showing attitude">
+                    <div class="gallery-caption">Attitude for days</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/goose-3.png" alt="Goose being adorable">
+                    <div class="gallery-caption">Professional cutie</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/goose-2-Picsart-BackgroundRemover.png" alt="Goose in his element">
+                    <div class="gallery-caption">Just Goose things</div>
                 </div>
             </div>
         </section>
