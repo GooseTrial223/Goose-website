@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A heroic tale of nighttime vigilance and questionable threats.">
+    <title>Dear Diary: I Barked at Nothing and It Was Important | Goose Droppings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dusty-pink: #dba1a1;
+            --warm-beige: #f5e6d3;
+            --neon-green: #a2ff00;
+            --dark-gray: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--dusty-pink);
+        }
+
+        .blog-post {
+            padding-top: 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: "👻";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            right: -2rem;
+            bottom: -4rem;
+            transform: rotate(-15deg);
+        }
+
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--neon-green);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .post-meta {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--dusty-pink);
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .signature {
+            font-family: 'Permanent Marker', cursive;
+            color: var(--dusty-pink);
+            font-size: 1.5rem;
+            text-align: right;
+            margin-top: 3rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem;
+            padding: 1rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: 'Permanent Marker', cursive;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark-gray);
+            color: white;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">THE GOOSE IS LOOSE</a></li>
+            <li><a href="manifesto.html" class="nav-link">GOOSE MANIFESTO</a></li>
+            <li><a href="gallery.html" class="nav-link">THE LOUVRE</a></li>
+            <li><a href="blog.html" class="nav-link">GOOSE DROPPINGS</a></li>
+            <li><a href="shop.html" class="nav-link">MERCH</a></li>
+            <li><a href="contact.html" class="nav-link">AGENT</a></li>
+        </ul>
+    </nav>
+
+    <article class="blog-post">
+        <header class="header">
+            <h1 class="title">Dear Diary: I Barked at Nothing and It Was Important</h1>
+            <p class="subtitle">You'll thank me later</p>
+        </header>
+
+        <div class="post-meta">
+            Posted by: Commander Goose, Protector of the Living Room
+        </div>
+
+        <div class="content">
+            <p>At exactly 3:14 AM, I sensed... a vibe.</p>
+            
+            <p>Could've been a moth. Could've been a ghost. Could've been the crushing weight of capitalism.<br>
+            But I barked. Oh, I barked with purpose.</p>
+
+            <p>She told me to hush. She mumbled something about "sleep."<br>
+            Sleep? Sleep is for people who don't believe in safety.</p>
+
+            <p>I spun in three angry circles and flopped down loudly.<br>
+            But I kept one eye open. Watching. Judging. Guarding.</p>
+
+            <p>And when morning came?<br>
+            No ghosts.<br>
+            You're welcome.</p>
+
+            <div class="signature">— Commander Goose, Protector of the Living Room</div>
+        </div>
+
+        <a href="blog.html" class="back-link">← Back to Goose Droppings</a>
+    </article>
+
+    <footer class="footer">
+        All opinions expressed belong to Goose and do not reflect the views of her human, who is just trying her best.
+    </footer>
+</body>
+</html> 

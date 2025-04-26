@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official manifesto of Silly Goose, Esq. Born with attitude, raised with snacks.">
+    <title>Goose Manifesto | A Snort in the Face of Mediocrity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dusty-pink: #dba1a1;
+            --warm-beige: #f5e6d3;
+            --neon-green: #a2ff00;
+            --dark-gray: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--dusty-pink);
+        }
+
+        .manifesto {
+            padding-top: 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: "🐾";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            right: -2rem;
+            bottom: -4rem;
+            transform: rotate(-15deg);
+        }
+
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--neon-green);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .origin-story {
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .origin-story p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            border-bottom: 2px solid var(--warm-beige);
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateX(10px);
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: var(--dusty-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .motto {
+            text-align: center;
+            padding: 4rem 2rem;
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--dark-gray);
+            position: relative;
+        }
+
+        .motto::before, .motto::after {
+            content: '"';
+            color: var(--dusty-pink);
+            font-size: 4rem;
+            position: absolute;
+            opacity: 0.5;
+        }
+
+        .motto::before {
+            top: 2rem;
+            left: 1rem;
+        }
+
+        .motto::after {
+            bottom: 2rem;
+            right: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .stats-card {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">THE GOOSE IS LOOSE</a></li>
+            <li><a href="#" class="nav-link">GOOSE MANIFESTO</a></li>
+            <li><a href="gallery.html" class="nav-link">THE LOUVRE</a></li>
+            <li><a href="blog.html" class="nav-link">GOOSE DROPPINGS</a></li>
+            <li><a href="shop.html" class="nav-link">MERCH</a></li>
+            <li><a href="contact.html" class="nav-link">AGENT</a></li>
+        </ul>
+    </nav>
+
+    <main class="manifesto">
+        <header class="header">
+            <h1 class="title">GOOSE MANIFESTO</h1>
+            <p class="subtitle">A snort in the face of mediocrity</p>
+        </header>
+
+        <section class="origin-story">
+            <p>Born with attitude, raised with snacks, and carried like royalty ever since—Silly Goose entered the world two years ago and immediately decided he was better than everyone. (He was right.)</p>
+            
+            <p>This 17-pound prince of pugdom has two great loves: his momma and a tragically worn-out Lambchop plushie that's seen more trauma than your last situationship.</p>
+            
+            <p>Don't let his snuggles fool you—he's got a bark like a smoker's cough and the confidence of a middle manager named Brad. Goose isn't just a dog. He's a lifestyle.</p>
+        </section>
+
+        <section class="stats-card">
+            <h2>GOOSE STATS</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Age</div>
+                    <div class="stat-value">2 years, emotionally 45</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Weight</div>
+                    <div class="stat-value">17 lbs of muscle, mystery, and sass</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Favorite Toy</div>
+                    <div class="stat-value">Lambchop (RIP to the other toys)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Favorite Human</div>
+                    <div class="stat-value">Momma. Duh.</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Favorite Position</div>
+                    <div class="stat-value">The dramatic side sprawl</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Love Language</div>
+                    <div class="stat-value">Staring at you until you break</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Greatest Strength</div>
+                    <div class="stat-value">Guilt-tripping you from across the room</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Weakness</div>
+                    <div class="stat-value">The word "no." Doesn't register.</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="motto">
+            If I fits, I sits. If I don't fits, I sits louder.
+        </div>
+    </main>
+
+    <script>
+        // Add some sass - stats hover effect
+        document.querySelectorAll('.stat-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.borderColor = 'var(--dusty-pink)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.borderColor = 'var(--warm-beige)';
+            });
+        });
+    </script>
+</body>
+</html> 
