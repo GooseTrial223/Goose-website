@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Goose Merch: Because you need more pug in your life">
+    <title>MERCH | The Goose Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dusty-pink: #dba1a1;
+            --warm-beige: #f5e6d3;
+            --neon-green: #a2ff00;
+            --dark-gray: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--dusty-pink);
+        }
+
+        .shop {
+            padding-top: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: "👕";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            right: -2rem;
+            bottom: -4rem;
+            transform: rotate(-15deg);
+        }
+
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--neon-green);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-family: 'Permanent Marker', cursive;
+            color: var(--dusty-pink);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            margin-bottom: 2rem;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: 'Permanent Marker', cursive;
+            transition: transform 0.3s;
+        }
+
+        .buy-button:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark-gray);
+            color: white;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .products {
+                padding: 1rem;
+            }
+        }
+
+        .intro {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2.5rem;
+            color: var(--dusty-pink);
+            text-align: center;
+            margin: 4rem 0 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .spec-item {
+            background: var(--warm-beige);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .faq {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+        }
+
+        .faq-question {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--dusty-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">THE GOOSE IS LOOSE</a></li>
+            <li><a href="manifesto.html" class="nav-link">GOOSE MANIFESTO</a></li>
+            <li><a href="gallery.html" class="nav-link">THE LOUVRE</a></li>
+            <li><a href="blog.html" class="nav-link">GOOSE DROPPINGS</a></li>
+            <li><a href="shop.html" class="nav-link">MERCH</a></li>
+            <li><a href="contact.html" class="nav-link">AGENT</a></li>
+        </ul>
+    </nav>
+
+    <main class="shop">
+        <header class="header">
+            <h1 class="title">THE GOOSE STORE</h1>
+            <p class="subtitle">Drip or drown, humans</p>
+        </header>
+
+        <div class="intro">
+            <h2 class="section-title">MERCH THAT NO ONE ASKED FOR</h2>
+            <p>But you're here, so you clearly have taste. Or too much time. Or both.</p>
+            <p>Welcome to the gift shop of unhinged delights. Everything here has been designed, chewed, approved, or sat on by Goose himself. These items will not change your life. But they will get you stopped in Trader Joe's by someone who also has unmedicated energy. And isn't that community?</p>
+        </div>
+
+        <h2 class="section-title">🔥 FEATURED CHAOS</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/tshirt-placeholder.jpg" alt="Goose Manifesto Tee" class="product-image">
+                <h2 class="product-title">Goose Manifesto Tee</h2>
+                <p class="product-price">$24.99</p>
+                <p class="product-description">
+                    Front: "Legally Blonde. Emotionally Unavailable. Unapologetically Flatulent."<br><br>
+                    Back: Goose's signature death glare and the phrase, "I didn't fart. But I support whoever did."
+                </p>
+                <div class="product-specs">
+                    <span class="spec-item">🪧 Sizes: XS–XXL</span>
+                    <span class="spec-item">🧼 Cold wash, like Goose's heart</span>
+                </div>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mug-placeholder.jpg" alt="Resting Goose Face Mug" class="product-image">
+                <h2 class="product-title">Resting Goose Face Mug</h2>
+                <p class="product-price">$14.99</p>
+                <p class="product-description">Sip coffee while being silently judged by Goose. Just like in real life.</p>
+                <div class="product-specs">
+                    <span class="spec-item">☕ 15oz of emotional support</span>
+                    <span class="spec-item">👁 Eye contact implied</span>
+                </div>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/tote-placeholder.jpg" alt="I Barked at Something Tote" class="product-image">
+                <h2 class="product-title">"I Barked at Something" Tote</h2>
+                <p class="product-price">$19.99</p>
+                <p class="product-description">
+                    For snacks, secrets, and bad decisions. Front: "I barked at something and it was important."<br><br>
+                    Back: "Probably a leaf. Or a ghost. Hard to say."
+                </p>
+                <div class="product-specs">
+                    <span class="spec-item">🐾 Ethically made</span>
+                    <span class="spec-item">🧺 Spot clean or live dangerously</span>
+                </div>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">🧼 FRESH DROPPINGS</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/calendar-placeholder.jpg" alt="Goose Calendar" class="product-image">
+                <h2 class="product-title">12 Months of Judgment</h2>
+                <p class="product-price">$29.99</p>
+                <p class="product-description">Each month features Goose looking vaguely disappointed in your life choices. Comes with stickers to mark Important Bark Days.</p>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/stickers-placeholder.jpg" alt="Zoomies & Crimes Sticker Pack" class="product-image">
+                <h2 class="product-title">Zoomies & Crimes Sticker Pack</h2>
+                <p class="product-price">$9.99</p>
+                <p class="product-description">Includes: "Criminally Cute," "Snack Bandit," and "Bite Me (Affectionately)."</p>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/plushie-placeholder.jpg" alt="Limited Edition Goose Plushie" class="product-image">
+                <h2 class="product-title">Limited Edition Goose Plushie</h2>
+                <p class="product-price">$34.99</p>
+                <p class="product-description">Looks adorable. Acts like a dictator. Comes pre-sassed.</p>
+                <a href="#" class="buy-button">ADD TO CART</a>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2 class="section-title">🐾 SHIPPING FAQ</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">(For the Overthinkers)</p>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">How fast is shipping?</h3>
+                <p class="faq-answer">Faster than Goose can fake a limp. Slower than his zoomies.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Do you ship internationally?</h3>
+                <p class="faq-answer">Yes. If your country accepts chaos by mail.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What's your return policy?</h3>
+                <p class="faq-answer">No returns. Goose believes in commitment.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        All merchandise is pug-approved. No treats were harmed in the making of these products.
+    </footer>
+</body>
+</html> 

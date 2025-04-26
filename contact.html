@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Goose's management team for appearances, collaborations, and treat sponsorships">
+    <title>AGENT | Book The Goose</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dusty-pink: #dba1a1;
+            --warm-beige: #f5e6d3;
+            --neon-green: #a2ff00;
+            --dark-gray: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--dusty-pink);
+        }
+
+        .contact {
+            padding-top: 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: "📞";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            right: -2rem;
+            bottom: -4rem;
+            transform: rotate(-15deg);
+        }
+
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--neon-green);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: var(--dusty-pink);
+        }
+
+        .form-input,
+        .form-textarea {
+            padding: 1rem;
+            border: 2px solid var(--warm-beige);
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--dusty-pink);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            padding: 1rem 2rem;
+            background: var(--dusty-pink);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: scale(1.05);
+        }
+
+        .requirements {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--warm-beige);
+            border-radius: 20px;
+        }
+
+        .requirements h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dusty-pink);
+        }
+
+        .requirements ul {
+            list-style-type: none;
+        }
+
+        .requirements li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .requirements li::before {
+            content: "🐾";
+            position: absolute;
+            left: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark-gray);
+            color: white;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">THE GOOSE IS LOOSE</a></li>
+            <li><a href="manifesto.html" class="nav-link">GOOSE MANIFESTO</a></li>
+            <li><a href="gallery.html" class="nav-link">THE LOUVRE</a></li>
+            <li><a href="blog.html" class="nav-link">GOOSE DROPPINGS</a></li>
+            <li><a href="shop.html" class="nav-link">MERCH</a></li>
+            <li><a href="contact.html" class="nav-link">AGENT</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact">
+        <header class="header">
+            <h1 class="title">BOOK THE GOOSE</h1>
+            <p class="subtitle">Let's talk business (and treats)</p>
+        </header>
+
+        <div class="content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label class="form-label" for="name">YOUR HUMAN NAME</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">EMAIL ADDRESS</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="event-type">TYPE OF INQUIRY</label>
+                    <select id="event-type" class="form-input" required>
+                        <option value="">Select an option</option>
+                        <option value="appearance">Public Appearance</option>
+                        <option value="sponsorship">Treat Sponsorship</option>
+                        <option value="collaboration">Influencer Collaboration</option>
+                        <option value="interview">Media Interview</option>
+                        <option value="other">Other (explain below)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">YOUR PITCH</label>
+                    <textarea id="message" class="form-textarea" required placeholder="Tell us about your event/opportunity. Please be specific about treat provisions."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">SUBMIT FOR REVIEW</button>
+            </form>
+
+            <div class="requirements">
+                <h2>Booking Requirements</h2>
+                <ul>
+                    <li>All appearances must include premium treat provisions (no generic brands)</li>
+                    <li>Minimum 3 nap breaks per hour of work</li>
+                    <li>Personal assistant to carry Goose when tired (approximately 80% of the time)</li>
+                    <li>No cats allowed in a 50-foot radius</li>
+                    <li>First-class transportation (human lap required)</li>
+                    <li>Exclusive access to all nearby blankets and soft surfaces</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        All inquiries will be reviewed by Goose's management team (after nap time).
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! Our team will review your inquiry and get back to you shortly (after treats).');
+        });
+    </script>
+</body>
+</html> 

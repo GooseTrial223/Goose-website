@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Silly Goose is the internet's sleepiest icon. Come for the pug. Stay for the sarcasm.">
-    <title>Silly Goose, Esq. | Legally Blonde. Emotionally Unavailable. Unapologetically Flatulent.</title>
+    <meta name="description" content="Meet Goose: Professional napper, amateur philosopher, and full-time chaos agent">
+    <title>THE GOOSE IS LOOSE | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,6 +25,7 @@
             background-color: var(--warm-beige);
             color: var(--dark-gray);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .nav {
@@ -57,90 +58,95 @@
         }
 
         .hero {
-            height: 100vh;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.9);
+            padding: 2rem;
+            padding-bottom: 550px; /* Add extra padding at bottom for image */
         }
 
         .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
-            color: white;
-            width: 90%;
             max-width: 800px;
+            z-index: 2;
+            margin-bottom: 100px; /* Reduced since we added padding to hero */
         }
 
-        .tagline {
-            font-family: 'Permanent Marker', cursive;
-            font-size: clamp(1rem, 4vw, 2rem);
-            color: var(--neon-green);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .site-title {
+        .title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: var(--dusty-pink);
+            text-shadow: 4px 4px 0px var(--dark-gray);
             margin-bottom: 2rem;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
         }
 
-        .scroll-btn {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .scroll-btn:hover {
-            transform: translateX(-50%) scale(1.1);
-        }
-
-        .pug-butt {
-            width: 60px;
-            height: 60px;
-            background-color: var(--dusty-pink);
-            border-radius: 50%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pug-butt::after {
-            content: "🐾";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2rem;
-        }
-
-        .intro {
-            padding: 4rem 2rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .intro-text {
-            font-size: 1.5rem;
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
             color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .goose-container {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            z-index: 1;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            background: white;
+            border-radius: 20px;
+            padding: 15px 25px;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 24px;
+            bottom: 85%;  /* Adjusted from 100% to 85% to lower the bubble */
+            right: 0;     /* Changed from left: 50% to right: 0 to position it to the side */
+            transform: translateX(-20%);  /* Adjusted transform to move it slightly left */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 40%;    /* Adjusted to match new bubble position */
+            transform: translateX(-50%);
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+        }
+
+        .goose-image {
+            width: 500px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .goose-image:hover {
+            transform: translateY(-10px);
         }
 
         @media (max-width: 768px) {
+            .hero {
+                padding-bottom: 350px;
+            }
+
             .nav-list {
                 gap: 1rem;
             }
@@ -149,8 +155,24 @@
                 font-size: 1rem;
             }
 
-            .intro-text {
-                font-size: 1.2rem;
+            .goose-container {
+                width: 300px;
+                bottom: 10px;
+            }
+
+            .goose-image {
+                width: 300px;
+            }
+
+            .speech-bubble {
+                font-size: 20px;
+                padding: 10px 20px;
+                margin-bottom: 15px;
+                bottom: 80%;  /* Adjusted for mobile */
+            }
+
+            .hero-content {
+                margin-bottom: 50px;
             }
         }
     </style>
@@ -158,7 +180,7 @@
 <body>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="#" class="nav-link">THE GOOSE IS LOOSE</a></li>
+            <li><a href="index.html" class="nav-link">THE GOOSE IS LOOSE</a></li>
             <li><a href="manifesto.html" class="nav-link">GOOSE MANIFESTO</a></li>
             <li><a href="gallery.html" class="nav-link">THE LOUVRE</a></li>
             <li><a href="blog.html" class="nav-link">GOOSE DROPPINGS</a></li>
@@ -167,33 +189,18 @@
         </ul>
     </nav>
 
-    <section class="hero">
-        <img src="images/goose.jpg" alt="Silly Goose in all her glory" class="hero-image">
+    <main class="hero">
         <div class="hero-content">
-            <p class="tagline">Legally Blonde. Emotionally Unavailable. Unapologetically Flatulent.</p>
-            <h1 class="site-title">SILLY GOOSE, ESQ.</h1>
+            <h1 class="title">THE GOOSE IS LOOSE</h1>
+            <p class="subtitle">Chaos incarnate, but make it cute</p>
+            <p class="description">
+                Welcome to the internet's least-needed website. This is Goose. He has no plans, minimal ambition, and a snore that could rattle drywall. And yet, you're still here. Bold choice.
+            </p>
         </div>
-        <button class="scroll-btn" aria-label="Follow Goose Into the Chaos">
-            <div class="pug-butt"></div>
-        </button>
-    </section>
-
-    <section class="intro">
-        <p class="intro-text">Welcome to the internet's least-needed website. This is Goose. She has no talents, minimal ambition, and a snore that could rattle drywall. And yet, you're still here. Bold choice.</p>
-    </section>
-
-    <script>
-        document.querySelector('.scroll-btn').addEventListener('click', () => {
-            document.querySelector('.intro').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Easter egg: Goose judges your mouse movements
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            document.querySelector('.hero-image').style.transform = 
-                `scale(1.05) translate(${(mouseX - 0.5) * -10}px, ${(mouseY - 0.5) * -10}px)`;
-        });
-    </script>
+        <div class="goose-container">
+            <div class="speech-bubble">chicken?</div>
+            <img src="images/goose-2-Picsart-BackgroundRemover.png" alt="Goose looking judgmental" class="goose-image">
+        </div>
+    </main>
 </body>
 </html> 
